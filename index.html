@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Messenger</title>
+    <script src="https://kit.fontawesome.com/5d70d660ee.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
@@ -12,10 +13,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="one">
-        <div class="main-container">
-            <!-- header -->
-            <div class="header">
+    <div class="main-header">
+        <div class="header">
+            <div class="header-child">
                 <img src="image/logo.png" class="logo">
                 <div class="nav-item">
                     <a href="" class="menu-item">Rooms</a>
@@ -23,13 +23,18 @@
                     <a href="" class="menu-item">Deskstop app</a>
                     <a href="" class="menu-item">Privacy and safety</a>
                     <a href="" class="menu-item">For developers</a>
+                    <i class="fas fa-bars menu-bar"></i>
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="one">
+        <div class="main-container">
             <!-- left & right content -->
             <div class="container">
                 <div class="left">
                     <div class="left-child">
-                        <h1>Hang out anytime, anywhere</h1>
+                        <h1>Hang out<br>anytime, anywhere</h1>
                         <div class="left-content">
                             Messenger makes it easy and fun to stay close to your favourite people.
                         </div>
@@ -48,8 +53,12 @@
                             <label for="" class="keep-signIn">Keep me signed in</label>
                         </div>
                         <div>
-                            <img src="image/microsoft.png" alt="" class="microsoft">
-                            <img src="image/appstore.png" alt="">
+                            <a href="" class="store">
+                                <img src="image/microsoft.png" alt="" class="microsoft">
+                            </a>
+                            <a href="" class="store">
+                                <img src="image/appstore.png" alt="">
+                            </a>
                         </div>                        
                     </div>
                 </div>
@@ -59,15 +68,16 @@
             </div>
             <!-- footer -->
             <div class="footer">
-                <div class="fot-pad">
+                <div class="fot-pad footer-content">
                     &copy;<span class="meta">Meta 2021.</span> The Apple and Google Play logos are trademarks of their respective owners.
                 </div>
                 <div class="data-terms"> 
-                    <span class="fot-pad">Data Policy</span>
-                    <span class="fot-pad">Terms</span>
+                    <span class="fot-pad policy"><a href="">Data Policy</a></span>
+                    <span class="fot-pad"><a href="">Terms</a></span>
                 </div>
                 <div class="fot-pad lang">
                     <a href="">English (UK)</a>
+                    <i class="fas fa-caret-down"></i>
                 </div>
                 <div>
                     <img src="image/facebook.jpg" alt="">

@@ -1,5 +1,6 @@
 body {
-    margin-top: 0;
+    margin: 0;
+    padding: 0;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -12,23 +13,35 @@ a {
 }
 
 .main-container {
-    max-width: 1195px;
+    max-width: 1195px;  /* width က 1195px ရှိရင် ရှိသလောက်ထားပါ၊ မရှိရင် screen width အတိုင်းယူ*/
     margin: 0 auto;
 }
 
 /* header */
 
-.header {
-    height: 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
+.main-header {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.header img {
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    opacity: 0.95;
+    margin: 0 30px;
+}
+
+.header-child {
+    max-width: 1195px;
+    height: 100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+}
+
+.header-child img {
     width: 40px;
 }
 
@@ -43,11 +56,19 @@ a {
     border-bottom: 3px solid #0084ff;
 }
 
+.menu-bar {
+    font-size: 30px;
+    display: none;
+    color: rgba(0, 0, 0, 0.6);
+}
+
 /* container */
 
 .container {
     display: flex;
+    flex-wrap: wrap;
     margin-bottom: 120px;
+    z-index: -9;
 }
 
 .left {
@@ -62,8 +83,12 @@ a {
     font-size: 70px;
     font-weight: 550;
     margin-bottom: 35px;
-    color: rgba(0, 0, 0, 0.8);
     line-height: 80px;
+    word-break: break-word;
+    background-image: linear-gradient(83.84deg, #0088FF -6.87%, #A033FF 26.54%, #FF5C87 58.58%);
+    background: linear-gradient(81.84deg, #0099ff -9.4%, #a033ff 51.57%, #ff5280 84.07%, #ff7061 90.59%);
+    -webkit-background-clip: text;
+    color: transparent;
 }
 
 .left-content {
@@ -74,6 +99,7 @@ a {
 }
 
 .input-element {
+    box-sizing: border-box;
     width: 320px;
     display: block;
     outline: none;
@@ -83,6 +109,10 @@ a {
     font-size: 17px;
     padding: 7px 16px;
     border-radius: 10px;
+}
+
+.input-element:focus {
+    border: 1px solid #0084ff;
 }
 
 ::placeholder {
@@ -104,6 +134,11 @@ button {
     color: #fff;
     padding: 4px 20px;
     margin-right: 20px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #14a2e4;
 }
 
 .forgot-psw {
@@ -118,12 +153,16 @@ button {
 
 
 .keep-signIn {
-    font-size: 13px;
+    font-size: 12px;
     color: rgba(0, 0, 0, 0.7);
 }
 
 .microsoft {
     height: 44px;
+}
+
+.store {
+    text-decoration: none;
 }
 
 .right {
@@ -155,6 +194,10 @@ button {
     justify-content: space-between;
 }
 
+.data-terms a {
+    text-decoration: none;
+}
+
 .lang {
     color: rgba(0, 0, 0, 0.5);
 }
@@ -166,5 +209,98 @@ button {
 .fot-pad {
     padding: 0 30px;
 }
+
 /* Media queries */
 
+@media (max-width: 1012px) {
+    /* container */
+
+    .container {
+        max-width: 440px;
+        margin: 0 auto;
+    }
+
+    .left, .right {
+        width: 100%;
+    }
+
+    .left h1 {
+        font-size: 50px;
+        text-align: center;
+        line-height: normal;
+        margin-bottom: 25px;
+    }
+
+    .left-child {
+        width: 100%;
+    }
+
+    .left-content {
+        text-align: center;
+    }
+
+    .input-element {
+        width: 100%;
+    }
+
+    .right {
+        margin-right: 28px;
+    }
+    
+    /* footer */
+    .footer {
+        display: block;
+        text-align: center;
+        margin-top: 55px;
+        font-size: 12px;
+
+    }
+
+    .footer div {
+        margin-bottom: 20px;
+    }
+
+    .footer-content {
+        padding: 0;
+    }
+
+    .data-terms {
+        display: flex;
+        justify-content: center;
+    }
+
+    .fot-pad {
+        padding: 0;
+    }
+
+    .policy {
+        padding-right: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .input-element {
+        width: 100%;
+    }
+
+    .container {
+        margin-top: 50px;
+    }
+
+    .left h1, .left-content {
+        text-align: left;
+    }
+
+    .left h1 {
+        padding-left: 10px;
+    }
+
+    .menu-item {
+        display: none;
+    }
+
+    .menu-bar {
+        display: inline-block;
+    }
+}
