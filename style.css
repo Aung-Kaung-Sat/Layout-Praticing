@@ -1,0 +1,170 @@
+body {
+    margin-top: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    color: inherit;
+}
+
+.one {
+    margin: 0 30px;
+}
+
+.main-container {
+    max-width: 1195px;
+    margin: 0 auto;
+}
+
+/* header */
+
+.header {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.header img {
+    width: 40px;
+}
+
+.menu-item {
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 30px;
+}
+
+.menu-item:hover {
+    border-bottom: 3px solid #0084ff;
+}
+
+/* container */
+
+.container {
+    display: flex;
+    margin-bottom: 120px;
+}
+
+.left {
+    width: 50%;
+}
+
+.left-child {
+    width: 75%;
+}
+
+.left h1 {
+    font-size: 70px;
+    font-weight: 550;
+    margin-bottom: 35px;
+    color: rgba(0, 0, 0, 0.8);
+    line-height: 80px;
+}
+
+.left-content {
+    margin-bottom: 40px;
+    line-height: 26px;
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: 450;
+}
+
+.input-element {
+    width: 320px;
+    display: block;
+    outline: none;
+    background-color: rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    margin-bottom: 12px;
+    font-size: 17px;
+    padding: 7px 16px;
+    border-radius: 10px;
+}
+
+::placeholder {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.btn-gp {
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+
+button {
+    height: 45px;
+    font-size: 18px;
+    font-weight: 550;
+    border-radius: 24px;
+    background-color: #0084ff;
+    border: 1px solid #0084ff;
+    color: #fff;
+    padding: 4px 20px;
+    margin-right: 20px;
+}
+
+.forgot-psw {
+    color: #0084ff;
+    font-size: 13px;
+    font-weight: 550;
+}
+
+.keep-signIn-block {
+    margin-bottom: 35px;
+}
+
+
+.keep-signIn {
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.microsoft {
+    height: 44px;
+}
+
+.right {
+    width: 50%;
+}
+
+.right img {
+    width: 100%;
+    margin-top: 48px;
+    margin-left: 30px;
+}
+
+/* footer */
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.meta {
+    font-weight: 500;
+}
+
+.data-terms {
+    display: flex;
+    justify-content: space-between;
+}
+
+.lang {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.lang a{
+    text-decoration: none;
+}
+
+.fot-pad {
+    padding: 0 30px;
+}
+/* Media queries */
+
